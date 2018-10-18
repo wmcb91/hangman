@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hangman</title>
+  <link type="text/css" rel="stylesheet" href="assets/main.css">
+</head>
+<body>
+  <main>
+    <h1>Hangman</h1>
+    <div id="pre-game-area" class="pre-game-area">
+      <div>
+        <button id="confirm-word" class="btn">Confirm</button>
+        <button id="random-word" class="btn">Random</button>
+        <button id="toggle-show-words" class="btn">Show Word List</button>
+      </div>
+      <div id="word-select" class="word-select">
+        <input id="word-choice" type="text" minlength="5" maxlength="18" list="">
+        <datalist id="wordlist"></datalist>
+        <div id="word-list" class="word-list"></div>
+        <small id="word-valid" class="word-valid"></small>
+      </div>
+    </div>
+    <div id="game-area" class="game-area hidden">
+      <div class="text-area">
+        <span id="win-msg">Congratulations, you won!</span>
+        <span id="loss-msg">Sorry, you lost.</span>
+        <span id="remaining-guesses"></span>
+      </div>
+      <div class="hangman-area">
+        <div id="hangman" class="hangman">
+          <span id="hm-1" class="pole vertical"></span>
+          <span id="hm-2" class="pole diagonal"></span>
+          <span id="hm-3" class="pole horizontal"></span>
+          <span id="hm-4" class="rope"></span>
+          <span id="hm-5" class="body head"></span>
+          <span id="hm-6" class="body torso"></span>
+          <span id="hm-7" class="body arm left"></span>
+          <span id="hm-8" class="body arm right"></span>
+          <span id="hm-9" class="body leg left"></span>
+          <span id="hm-10" class="body leg right"></span>
+        </div>
+      </div>
+      <div id="word-area" class="word-area">
+      </div>
+      <div id="guess-area">
+        <input id="guess-letter" class="guess-letter" type="text" maxlength="1" required>
+        <button id="confirm-guess" class="btn">Guess Letter</button>
+      </div>
+      <button id="play-again" class="btn hidden">Play Again</button>
+      <div id="incorrect-guesses" class="incorrect-guesses"></div>
+    </div>
+  </main>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript" src="assets/words.js"></script>
+  <script type="text/javascript" src="assets/index.js"></script>
+</body>
+</html>
