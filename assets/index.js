@@ -143,7 +143,7 @@ const onConfirmGuess = () => {
   }
 
   // Clear guess input  
-  $('#guess-letter').val('');
+  $('#guess-letter').val('').focus();
 }
 
 const onConfirmWordClick = () => {
