@@ -27,8 +27,9 @@ input[type='text'] {
 }
 
 .btn {
-  height: 34px;
   border-radius: 5px;
+  cursor: pointer;
+  height: 34px;
   font-size: 1.25em;
 }
 
