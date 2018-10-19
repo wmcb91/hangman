@@ -181,6 +181,15 @@ const onGuessLetterInput = (event) => {
   }
 }
 
+const onPlayRandomWordClick = () => {
+  debugger;
+  $('#word-choice').hide();
+  selectRandom();
+  onConfirmWordClick();
+  $('#word-choice').show();
+}
+
+$('#play-random-word').on('click', onPlayRandomWordClick);
 $('#random-word').on('click', selectRandom);
 $('#confirm-word').on('click', onConfirmWordClick);
 $('#word-choice').on('keydown', (event) => {
