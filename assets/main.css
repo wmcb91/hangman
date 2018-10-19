@@ -31,6 +31,7 @@ input[type='text'] {
   cursor: pointer;
   height: 34px;
   font-size: 1.25em;
+  margin: 5px;
 }
 
 .rules {
