@@ -149,11 +149,7 @@ const onConfirmGuess = () => {
 
 const onConfirmWordClick = () => {
   let wordChoice = $('#word-choice').val().toLowerCase();
-  if (app.words.includes(wordChoice)) {
-    startGame(wordChoice);
-  } else {
-    alert('Invalid Word Choice');
-  }
+  startGame(wordChoice);
 }
 
 const onWordKeyUp = (event) => {
@@ -200,7 +196,6 @@ $('#guess-letter').on('keydown', onGuessLetterInput);
 $('#toggle-show-words').on('click', () => {
   let btn = $('#toggle-show-words');
   let showList = $('#word-choice').attr('list') === 'false';
-  console.log(showList)
   if (showList) {
     $('#word-choice').attr('list', 'wordlist');
     btn.text('Hide Word List');
