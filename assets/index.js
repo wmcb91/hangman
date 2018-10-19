@@ -64,7 +64,6 @@ const endGame = (win) => {
 
 const onPlayAgainClick = () => {
   $('#game-area, #pre-game-area').toggleClass('hidden');
-  $('#word-valid').text('');
 }
 
 const selectRandom = () => {
@@ -155,17 +154,6 @@ const onConfirmWordClick = () => {
 const onWordKeyUp = (event) => {
   if (event.keyCode === 13) {
     onConfirmWordClick();
-  }
-  let word = $('#word-choice').val();
-  let idx = app.words.indexOf(word);
-  if (idx > -1) {
-    $('#word-valid').text('Valid');
-  } else {
-    $('#word-valid').text('Invalid');
-  }
-
-  if(!word.length) {
-    $('#word-valid').text('');
   }
 }
 
