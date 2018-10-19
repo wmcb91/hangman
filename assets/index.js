@@ -127,7 +127,7 @@ const onConfirmGuess = () => {
   if (app.game.lettersGuessed.includes(letter)) {
     // If already guessed, that is not allowed
     $('#guess-letter').val('');
-    alert('Already guessed this letter');
+    $('#already-guessed').fadeIn(100).delay(1200).fadeOut();
     return;
   }
 
@@ -170,7 +170,6 @@ const onGuessLetterInput = (event) => {
 }
 
 const onPlayRandomWordClick = () => {
-  debugger;
   $('#word-choice').hide();
   selectRandom();
   onConfirmWordClick();
@@ -189,7 +188,7 @@ $('#word-choice').on('keydown', (event) => {
 $('#word-choice').on('keyup', onWordKeyUp);
 $('#confirm-guess').on('click', onConfirmGuess);
 $('#play-again').on('click', onPlayAgainClick);
-$('#guess-letter').on('keydown', onGuessLetterInput);
+$('#guess-letter').on('keydown input', onGuessLetterInput);
 $('#toggle-show-words').on('click', () => {
   let btn = $('#toggle-show-words');
   let showList = $('#word-choice').attr('list') === 'false';
