@@ -209,3 +209,5 @@ const arrSort = (arr) => {
 arrSort(app.words).forEach(word => {
   $('#wordlist').append(`<option value="${word}">`);
 });
+
+$('#toggle-show-words').prop('disabled', false);
